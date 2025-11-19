@@ -6,14 +6,43 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1F543DBB2EC7615000C60314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F543DB62EC7615000C60314 /* Assets.xcassets */; };
+		1F543DBD2EC7615000C60314 /* CodewayCaseStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F543DB82EC7615000C60314 /* CodewayCaseStudyApp.swift */; };
+		1F543DBE2EC7615000C60314 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F543DB92EC7615000C60314 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1F543DA62EC755BC00C60314 /* CodewayCaseStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodewayCaseStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F543DB62EC7615000C60314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F543DB82EC7615000C60314 /* CodewayCaseStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodewayCaseStudyApp.swift; sourceTree = "<group>"; };
+		1F543DB92EC7615000C60314 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1F543DA82EC755BC00C60314 /* CodewayCaseStudy */ = {
+		1F543DBF2EC7615B00C60314 /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CodewayCaseStudy;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F543DC72EC7619000C60314 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1F543DC92EC761AF00C60314 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1F543DD32EC761E900C60314 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1F543DDD2EC7620E00C60314 /* View */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +61,7 @@
 		1F543D9D2EC755BC00C60314 = {
 			isa = PBXGroup;
 			children = (
-				1F543DA82EC755BC00C60314 /* CodewayCaseStudy */,
+				1F543DBA2EC7615000C60314 /* CodewayCaseStudy */,
 				1F543DA72EC755BC00C60314 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +72,21 @@
 				1F543DA62EC755BC00C60314 /* CodewayCaseStudy.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1F543DBA2EC7615000C60314 /* CodewayCaseStudy */ = {
+			isa = PBXGroup;
+			children = (
+				1F543DC72EC7619000C60314 /* Core */,
+				1F543DC92EC761AF00C60314 /* Services */,
+				1F543DD32EC761E900C60314 /* ViewModels */,
+				1F543DDD2EC7620E00C60314 /* View */,
+				1F543DBF2EC7615B00C60314 /* Models */,
+				1F543DB62EC7615000C60314 /* Assets.xcassets */,
+				1F543DB82EC7615000C60314 /* CodewayCaseStudyApp.swift */,
+				1F543DB92EC7615000C60314 /* ContentView.swift */,
+			);
+			path = CodewayCaseStudy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -61,7 +105,11 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				1F543DA82EC755BC00C60314 /* CodewayCaseStudy */,
+				1F543DBF2EC7615B00C60314 /* Models */,
+				1F543DC72EC7619000C60314 /* Core */,
+				1F543DC92EC761AF00C60314 /* Services */,
+				1F543DD32EC761E900C60314 /* ViewModels */,
+				1F543DDD2EC7620E00C60314 /* View */,
 			);
 			name = CodewayCaseStudy;
 			packageProductDependencies = (
@@ -109,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F543DBB2EC7615000C60314 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F543DBD2EC7615000C60314 /* CodewayCaseStudyApp.swift in Sources */,
+				1F543DBE2EC7615000C60314 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,11 +307,14 @@
 				DEVELOPMENT_TEAM = J5AGP545LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app may analyze and organize your photos into groups.\n";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app scans your photo library to group your photos.\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -288,11 +342,14 @@
 				DEVELOPMENT_TEAM = J5AGP545LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app may analyze and organize your photos into groups.\n";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app scans your photo library to group your photos.\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
